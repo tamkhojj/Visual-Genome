@@ -24,7 +24,7 @@ def get_objects():
 
 @app.get("/attributes")
 def get_atr():
-    response = requests.get('http://127.0.0.1:8000/attributes')
+    response = requests.get('https://visual-genome.onrender.com/attributes')
     if response.status_code == 200:
         data = response.json()
         return data
