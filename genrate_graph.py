@@ -1,6 +1,5 @@
 import requests
 from neo4j import GraphDatabase
-import dotenv
 import os
 
 # Fetch JSON data from the second API
