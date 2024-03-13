@@ -17,7 +17,7 @@ async def root():
 
 @app.get("/{data}", response_class=StreamingResponse)
 async def get_data(data):
-    path = os.path.join(dir, 'Dataset/{filename}.json/{filename}.json'.format(filename=data))
+    path = os.path.join(dir, '{filename}.json'.format(filename=data))
 
     if os.path.exists(path):
         file = open(path, "rb")
