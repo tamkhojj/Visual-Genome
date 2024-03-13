@@ -2,12 +2,10 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from fastapi.responses import StreamingResponse
 import os
-from mangum import Mangum
 
 dir = os.path.dirname(__file__)
 
 app = FastAPI()
-handler = Mangum(app)
 
 
 @app.get('/')
