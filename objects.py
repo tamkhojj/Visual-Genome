@@ -12,7 +12,7 @@ app = FastAPI()
 
 @app.get("/objects")
 def get_objects():
-    response = requests.get('http://127.0.0.1:8000/objects')
+    response = requests.get('http://web:8000/objects')
     if response.status_code == 200:
         data = response.json()
         return data
@@ -22,7 +22,7 @@ def get_objects():
 
 @app.get("/attributes")
 def get_atr():
-    response = requests.get('http://127.0.0.1:8000/attributes')
+    response = requests.get('http://web:8000/attributes')
     if response.status_code == 200:
         data = response.json()
         return data

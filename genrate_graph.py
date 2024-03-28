@@ -3,10 +3,10 @@ import dotenv
 import os
 from neo4j import GraphDatabase
 
-url_get_object = "http://localhost:9000/get_object_belong_to_image"
+url_get_object = "http://web:8001/get_object_belong_to_image"
 response1 = requests.get(url_get_object)
 
-url_relationships = "http://127.0.0.1:8000/relationships"
+url_relationships = "http://web:8000/relationships"
 response2 = requests.get(url_relationships)
 
 if response1.status_code == 200 and response2.status_code == 200:
